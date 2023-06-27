@@ -1,0 +1,13 @@
+.sticky-footer{
+  box-shadow: 0 0 10px 0 #0003;
+  margin-top: 2rem;
+}
+
+.sticky-footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.credits{
+  font-size: 0.8rem;
+}

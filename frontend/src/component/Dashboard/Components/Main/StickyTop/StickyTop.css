@@ -1,0 +1,24 @@
+.profile-link {
+  color: #000!important;
+  transition: all 0.2s ease-in-out;
+}
+
+.arrow {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item.show .arrow{
+  transform: rotateX(180deg);
+}
+
+/* #navbarDropdown + .dropdown-menu {
+  width: max-content!important;
+} */
+
+@media screen and (max-width: 576px) {
+  #navbarDropdown + .dropdown-menu {
+    width: calc(90% - 1.5rem);
+    right: 2rem;  
+    left: 30px!important;
+  }
+}

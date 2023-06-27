@@ -1,0 +1,48 @@
+a:hover {
+  color: #1bbd36;
+  text-decoration: none;
+}
+#imgHeader {
+  width: 150px;
+  height: 50px;
+}
+.heading-text{
+  color:#000;
+  text-decoration: none;
+}
+.heading-text:hover{
+  color:#000;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 991px){
+  .pipe {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+.navbar.navbar-expand-lg{
+  box-shadow: 0 0 10px 0 #00000033;
+}
+
+.Navlink {
+  color: #000000b3;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+.Navlink:hover{
+  text-decoration: none;
+  color:#1bbd36;
+}
+
+.profile-menu{
+  left: -110%!important;
+}

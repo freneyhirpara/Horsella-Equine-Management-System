@@ -1,0 +1,1711 @@
+{
+	"info": {
+		"_postman_id": "cbd65479-01c5-43bf-9220-af4afdec8f74",
+		"name": "Horsella",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Requests",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "Admin",
+									"type": "text"
+								},
+								{
+									"key": "middlename",
+									"value": "Alpesh",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "lastname",
+									"value": "Admin",
+									"type": "text"
+								},
+								{
+									"key": "phoneRegion",
+									"value": "IN",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "9834571327",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "India",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mainadmin@horsella.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Password@1234",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/register",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/user/delete/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/user/all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin.ds@horsella.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "NewPassw0rd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/user/39",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "dhrumit",
+									"type": "text"
+								},
+								{
+									"key": "middlename",
+									"value": "alpesh",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "soni",
+									"type": "text"
+								},
+								{
+									"key": "phoneRegion",
+									"value": "IN",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "9823746471",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "india",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/update/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPass\": \"NewPassw0rd\",\r\n    \"newPass\": \"NewerPassw0rd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/changePassword",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply for Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"dhrumit.soni@thegatewaycorp.co.in\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/applyreset",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"applyreset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTUsImVtYWlsIjoiZGhydW1pdC5zb25pQHRoZWdhdGV3YXljb3JwLmNvLmluIiwicGFzc3dvcmQiOiIkMmIkMTAkRGtHMFI5dzVpQmdaT3NkR1JDckdEZUFpd1AwMTJqQmpSbW4wS1J6U2Fwc3htM0kuNDF2QS4iLCJpYXQiOjE2MTcyNjAzOTIsImV4cCI6MTYxNzI3NDc5Mn0.tZHIG28_RSrKq0L3EdqqhNwUmIdvk-oV_bSvjMGUNkM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPass\": \"NewPassw0rd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/resetpassword",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"resetpassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Horse Requests",
+			"item": [
+				{
+					"name": "Get Horses owned by User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/list",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Horse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "horseName",
+									"value": "Gypsy",
+									"type": "text"
+								},
+								{
+									"key": "ownerId",
+									"value": "9",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "showName",
+									"value": "Gypsy",
+									"type": "text"
+								},
+								{
+									"key": "genderId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "colorId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "disciplineId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "breedId",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "microchipNumber",
+									"value": "182937465910954",
+									"type": "text"
+								},
+								{
+									"key": "horseWeight",
+									"value": "576",
+									"type": "text"
+								},
+								{
+									"key": "horseHeight",
+									"value": "1.5",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "2021-02-21",
+									"type": "text"
+								},
+								{
+									"key": "father",
+									"value": "Gypsy",
+									"type": "text"
+								},
+								{
+									"key": "mother",
+									"value": "Fancy",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/horse/add",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Horses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Horse By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "horseName",
+									"value": "Ladybug",
+									"type": "text"
+								},
+								{
+									"key": "ownerId",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "showName",
+									"value": "Ladybug",
+									"type": "text"
+								},
+								{
+									"key": "genderId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "breedId",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "colorId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "disciplineId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "microchipNumber",
+									"value": "182937465910954",
+									"type": "text"
+								},
+								{
+									"key": "horseWeight",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "horseHeight",
+									"value": "1.5",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "2021-02-21",
+									"type": "text"
+								},
+								{
+									"key": "father",
+									"value": "Gypsy",
+									"type": "text"
+								},
+								{
+									"key": "mother",
+									"value": "Lacey",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/horse/update/14",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"update",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Horse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/delete/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Horse By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/14",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Horse Selling",
+			"item": [
+				{
+					"name": "Get All Selling Horses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/selling/all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"selling",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Horses set for sale by user id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/my-sales",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"my-sales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Horse for Sale",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "price",
+									"value": "200000.989",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/horse/sell-horse/14",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"sell-horse",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Horse to Sold",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/update-horse-sold/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"update-horse-sold",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Horse Buying",
+			"item": [
+				{
+					"name": "Get all Horses Bought",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/purchases/all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"purchases",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get horses bought by user id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/my-purchases",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"my-purchases"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Training Centers",
+			"item": [
+				{
+					"name": "Get All training centers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/training-center/all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"training-center",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get training center by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/training-center/9",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"training-center",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a Training center",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "centerName",
+									"value": "Johns training center",
+									"type": "text"
+								},
+								{
+									"key": "ownerName",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "An excellent training center",
+									"type": "text"
+								},
+								{
+									"key": "workingHours",
+									"value": "8 to 7",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "contact",
+									"value": "9868784534",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "john@training.com",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Gujarat, India",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "www.john.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/training-center/add",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"training-center",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update training Center",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "centerName",
+									"value": "Jack training center",
+									"type": "text"
+								},
+								{
+									"key": "ownerName",
+									"value": "Jack",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Nice training center",
+									"type": "text"
+								},
+								{
+									"key": "workingHours",
+									"value": "9 to 7",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "contact",
+									"value": "9878675689",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jack@email.com",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Gujarat, India",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "www.jack.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/training-center/update/9",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"training-center",
+								"update",
+								"9"
+							],
+							"query": [
+								{
+									"key": "centerName",
+									"value": "horse training",
+									"disabled": true
+								},
+								{
+									"key": "ownerName",
+									"value": "jack",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "A decent training center",
+									"disabled": true
+								},
+								{
+									"key": "workingHours",
+									"value": "9 to 7",
+									"disabled": true
+								},
+								{
+									"key": "experience",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "contact",
+									"value": "8978697845",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "jack@email.com",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "India",
+									"disabled": true
+								},
+								{
+									"key": "website",
+									"value": "www.jack.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete training Center",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/training-center/delete/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"training-center",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Racing Requests",
+			"item": [
+				{
+					"name": "Get all racing events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/race/all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"race",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a racing event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "raceName",
+									"value": "The great race",
+									"type": "text"
+								},
+								{
+									"key": "raceCourse",
+									"value": "The arena",
+									"type": "text"
+								},
+								{
+									"key": "raceDate",
+									"value": "2021-03-06",
+									"type": "text"
+								},
+								{
+									"key": "raceLength",
+									"value": "1456",
+									"type": "text"
+								},
+								{
+									"key": "raceHorseAgeCriteria",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "raceHorseWeightCriteria",
+									"value": "500",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/race/add",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"race",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update race event",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "raceName",
+									"value": "Mega race",
+									"type": "text"
+								},
+								{
+									"key": "raceCourse",
+									"value": "Arena",
+									"type": "text"
+								},
+								{
+									"key": "raceDate",
+									"value": "2021-03-06",
+									"type": "text"
+								},
+								{
+									"key": "raceLength",
+									"value": "1457",
+									"type": "text"
+								},
+								{
+									"key": "raceHorseAgeCriteria",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "raceHorseWeightCriteria",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "isCompleted",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "isCancelled",
+									"value": "false",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/race/update/10",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"race",
+								"update",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete race event",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/race/delete/11",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"race",
+								"delete",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Race By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/race/7",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"race",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Participate In Race",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "horseId",
+									"value": "17",
+									"type": "text"
+								},
+								{
+									"key": "riderName",
+									"value": "Some rider",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/race/12/participate",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"race",
+								"12",
+								"participate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Participation By race",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/race/13/participants",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"race",
+								"13",
+								"participants"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Breeding Center",
+			"item": [
+				{
+					"name": "Get all Breeding Center",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/breeding-center/all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"breeding-center",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Breeding Center by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/breeding-center/7",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"breeding-center",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add breeding Center",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "centerName",
+									"value": "New breeding center",
+									"type": "text"
+								},
+								{
+									"key": "ownerName",
+									"value": "Jack",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "nice breeding center",
+									"type": "text"
+								},
+								{
+									"key": "workingHours",
+									"value": "9 to 7",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "contact",
+									"value": "8796758483",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jack@email.com",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Gujarat, india",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "www.jack.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/breeding-center/add",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"breeding-center",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Breeding Center",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "centerName",
+									"value": "breeding center ",
+									"type": "text"
+								},
+								{
+									"key": "ownerName",
+									"value": "joseph",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Decent breeding center",
+									"type": "text"
+								},
+								{
+									"key": "workingHours",
+									"value": "10 to 6",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "joseph@email.com",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "contact",
+									"value": "8790878673",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "www.joseph.com",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Gujarat, India",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/breeding-center/update/7",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"breeding-center",
+								"update",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Breeding Center",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/breeding-center/delete/7",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"breeding-center",
+								"delete",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Horse Utils",
+			"item": [
+				{
+					"name": "Get all horse genders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/genders",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"genders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Horse Colors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/colors",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"colors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Horse Disciplines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/disciplines",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"disciplines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Horse Breeds",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/horse/breeds",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"horse",
+								"breeds"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact Us",
+			"item": [
+				{
+					"name": "Post Contact Query",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userName",
+									"value": "Dhrumit Soni",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dhrumit.soni@email.com",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "This is a subject",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/contact-us/add",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"contact-us",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Queries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/contact-us/all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"contact-us",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Horse Journal",
+			"item": [
+				{
+					"name": "Post Event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventId\": 2,\r\n    \"horseId\": 47,\r\n    \"title\": \"Test 1\",\r\n    \"description\": \"Test 1 description\",\r\n    \"startDate\": \"2021-03-25\",\r\n    \"endDate\": \"2021-04-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/journal",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"journal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/journal/eventtypes",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"journal",
+								"eventtypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/journal/all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"journal",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/journal/2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"journal",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventId\": 2,\r\n    \"horseId\": 47,\r\n    \"title\": \"Test 2\",\r\n    \"description\": \"Test 1 description\",\r\n    \"startDate\": \"2021-03-25\",\r\n    \"endDate\": \"2021-04-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/journal/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"journal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Event",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/journal/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"journal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": null
+		},
+		{
+			"key": "baseurl",
+			"value": "localhost:3000/api/"
+		}
+	]
+}

@@ -1,0 +1,130 @@
+.ownershipStatic {
+  overflow: hidden;
+  margin-top: 76px;
+}
+
+\.img-container {
+  position: relative;
+}
+
+.ownership-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:  radial-gradient(circle , #0003 30%, #0006 70%, #0009 100%);
+}
+
+.imageOwnership{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 20px 10px #0000004d;
+}
+
+.ownership-heading {
+  position: absolute;
+  bottom: 20px;
+  left: 80px;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px 10px #00000080;
+}
+
+@media screen and (max-width: 800px) {
+  .ownership-heading {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ownership-heading {
+    font-size: 1.5rem;
+    left: 20px;
+  }
+}
+
+
+.about-text {
+  margin-top: 70px;
+  margin-left: 50px;
+  margin-bottom: 90px;
+  font-size: 1.5rem;
+}
+
+.ownershipStatic .content h2 {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.ownershipStatic .content h3 {
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+
+.tablehorse{
+  width: max-content!important;
+}
+
+.symbol-col{
+  min-width: 90px!important;
+}
+
+@media screen and (max-width: 1345px){
+  #ownershipTable.table{
+    width: max-content!important;
+  }
+}
+
+@media screen and (max-width: 992px){
+  #ownershipTable.table{
+    width: 100%!important;
+  }
+}
+
+.form-buttons{
+  border: 2px solid #1bbd36!important;
+  color: #1bbd36!important;
+  transition: all 0.3s ease-in-out!important;
+  font-weight: 600!important;
+  width: 180px;
+}
+
+.form-buttons:hover {
+  background-color: #1bbd36!important;
+  color: #fff!important;
+}
+
+.form-add {
+  transition: all 0.3s ease-in-out;
+}
+
+.form-add:hover{
+  color: #1bbd36;
+  cursor: pointer;
+}
+
+.form-edit {
+  transition: all 0.3s ease-in-out;
+}
+
+.form-edit:hover{
+  color: #3498db;
+  cursor: pointer;
+}
+
+.form-delete {
+  transition: all 0.3s ease-in-out;
+}
+
+.form-delete:hover{
+  color: #f00;
+  cursor: pointer;
+}

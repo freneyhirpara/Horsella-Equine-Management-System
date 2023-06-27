@@ -1,0 +1,39 @@
+.navbar-container{
+  position: sticky;
+  top: 0;
+}
+
+.navbar-nav.sidebar{
+  background-color: #1bbd36;
+}
+
+.navbar-nav.toggled .names {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.navbar-nav .fontawesome {
+  margin-right: 1rem!important;
+}
+
+.navbar-nav.toggled .fontawesome {
+  margin-right: 0!important;
+}
+
+@media screen and (max-width: 768px){
+  .navbar-nav .names {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+  } 
+}
+
+.fontawesome {
+  font-size: 1.3rem!important;
+  color: #fff!important;
+}
+
+.fa-bars {
+  color: #1bbd36;
+}

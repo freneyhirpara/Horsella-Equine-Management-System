@@ -1,0 +1,42 @@
+.container {
+  padding-left: 0.5rem!important;
+  padding-right: 0.5rem!important;
+}
+
+.table {
+  margin: auto;
+  width: max-content;
+  max-width: 80vw;
+}
+
+.w-max {
+  width: max-content;
+}
+
+.symbol {
+  transition: all 0.3s ease-in-out;
+}
+
+.fas.disabled {
+  color: #afafaf;
+}
+
+.symbol:hover {
+  color: #1bbd36;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .table-responsive {
+    width: 100%!important;
+    max-width: 80vw;
+  }
+}
+
+.action-col{
+  min-width: 131px!important;
+}
+
+.date-col {
+  min-width: 110px!important;
+}

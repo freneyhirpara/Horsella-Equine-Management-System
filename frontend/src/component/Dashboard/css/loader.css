@@ -1,0 +1,68 @@
+.content {
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index:2;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Form buttons */
+.form-buttons{
+    border: 2px solid #1bbd36!important;
+    color: #1bbd36!important;
+    transition: all 0.3s ease-in-out!important;
+    font-weight: 600!important;
+    width: 80px;
+}
+
+.form-buttons:hover {
+    background-color: #1bbd36!important;
+    color: #fff!important;
+}
+
+/* Form actions */
+
+.form-add {
+    transition: all 0.3s ease-in-out;
+}
+
+.form-add:hover{
+    color: #1bbd36;
+    cursor: pointer;
+}
+
+.form-edit {
+    transition: all 0.3s ease-in-out;
+}
+
+.form-edit:hover{
+    color: #3498db;
+    cursor: pointer;
+}
+
+.form-delete {
+    transition: all 0.3s ease-in-out;
+}
+
+.form-delete:hover{
+    color: #f00;
+    cursor: pointer;
+}
